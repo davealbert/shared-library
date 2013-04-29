@@ -5,7 +5,11 @@
 
 
 void processCommands() {
-  char *commandInput = "This is a string";
-
-  printf("%s\n",commandInput );
+	 char commandInput[MAX_STRING_LEN];
+	 char *prompt = "";
+	 printf("\nLoaded ...\n");
+	 while(strcmp(commandInput,"reset")!=0){
+		 printf("%s> ",prompt);
+		 scanf("%s",commandInput);
+	}
 }
