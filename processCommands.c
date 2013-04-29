@@ -8,6 +8,9 @@
 #include "helpCommand.h"
 #define HELP_LIB "/usr/lib64/libchelpCommand.so"
 
+#include "echoServer.h"
+#define ECHO_SERVER_LIB "/usr/lib64/libcechoServer.so"
+
 void runCommand(char *lib, char *cmd){
 	 void *lib_handle;
 	 char *error;
@@ -43,6 +46,7 @@ void processCommands() {
 			}
 
 			if(strcmp(commandInput,"help")==0) { runCommand(HELP_LIB, "showHelp"); }
+			if(strcmp(commandInput,"echo")==0) { runCommand(ECHO_SERVER_LIB, "echoServer"); }
 
 	 }
 }
