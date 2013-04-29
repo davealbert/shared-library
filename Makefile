@@ -5,8 +5,9 @@ dyno: objects
 				gcc -rdynamic -o dyno dyno.c -ldl
 				
 objects:
-				gcc -Wall -fPIC -c processCommands.c
+				gcc -Wall -fPIC -c processCommands.c helpCommand.c
 				gcc -shared -Wl,-soname,libcprocessCommands.so -o libcprocessCommands.so *.o
+				gcc -shared -Wl,-soname,libchelpCommand.so -o libchelpCommand.so *.o
 				
 clean: 
 				rm *.o *.so 
