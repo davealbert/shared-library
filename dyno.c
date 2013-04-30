@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]) {
 						fprintf(stderr, "%s\n", error);
 						exit(1);
 				 }
-				 printf("Starting ...");
+				 printf("Starting ... ");
 				 (*fn)(&x);
 				 dlclose(lib_handle);
 				 sleep(1);
