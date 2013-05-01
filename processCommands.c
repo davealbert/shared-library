@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <dlfcn.h>
+#include <unistd.h>
 
 #define MAX_STRING_LEN 80
 
@@ -29,6 +30,7 @@ void processCommands() {
 			else if(strcmp(commandInput,"help")==0) { runCommand(HELP_LIB, "showHelp"); }
 			else if(strcmp(commandInput,"echo")==0) { runCommand(ECHO_SERVER_LIB, "echoServer"); }
 			else if(strcmp(commandInput,"reset")==0) { printf("Restarting ... "); }
+			else if(strcmp(commandInput,"vim")==0) { system("vim");  }
 					
 			else { printf("Invalid command : '%s'.\n",commandInput);}
 	 }
